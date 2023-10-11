@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function HexForm() {
+  let colourCode = "";
+
   const inputWidth = { width: "67px" };
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -9,7 +12,9 @@ export default function HexForm() {
     const formData = new FormData(form);
 
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
+    colourCode = formJson["HEX-value"];
+
+    console.log(colourCode);
   }
 
   return (

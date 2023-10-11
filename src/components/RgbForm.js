@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function RgbForm() {
+  let colourCode = "";
+
   const inputWidth = { width: "22px" };
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -9,7 +12,14 @@ export default function RgbForm() {
     const formData = new FormData(form);
 
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
+    colourCode =
+      formJson["RED-value"] +
+      " " +
+      formJson["GREEN-value"] +
+      " " +
+      formJson["BLUE-value"];
+
+    console.log(colourCode);
   }
 
   return (
