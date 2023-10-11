@@ -1,12 +1,24 @@
 import React from "react";
 
-export default function HexInput() {
+export default function HexInput({ onClick }) {
+  const inputWidth = { width: "67px" };
+
   return (
-    <form>
-      <p>Enter your HEX code:</p>
-      <span>
-        #<input maxLength={6} minLength={6} placeholder="fcba03"></input>
-      </span>
-    </form>
+    <>
+      <button onClick={onClick}>Use RGB Instead</button>
+      <form>
+        <p>Enter your HEX code:</p>
+        <span>
+          #
+          <input
+            style={inputWidth}
+            type="text"
+            maxLength={6}
+            placeholder="fcba03"
+            pattern="[a-f0-9]{6}"
+          ></input>
+        </span>
+      </form>
+    </>
   );
 }

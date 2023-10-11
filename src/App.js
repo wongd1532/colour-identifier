@@ -1,15 +1,12 @@
+import React, { useState } from "react";
 import "./App.css";
-import ModeSelector from "./components/ModeSelector";
-import HexInput from "./components/HexInput";
-import RgbInput from "./components/RgbInput";
+import InputMode from "./components/InputMode";
 
 function App() {
   return (
     <div>
       <header>Colour Identifier</header>
-      <ModeSelector />
-      <HexInput />
-      <RgbInput />
+      <InputMode />
     </div>
   );
 }
