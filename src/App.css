@@ -40,3 +40,7 @@
 input{
   text-transform: lowercase;
 }
+
+input:invalid {
+  border: red solid 3px
+}

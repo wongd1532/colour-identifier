@@ -9,23 +9,26 @@ export default function RgbInput() {
         RGB({" "}
         <input
           style={inputWidth}
+          type="text"
           maxLength={3}
-          minLength={1}
           placeholder="252"
+          pattern="[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]"
         ></input>
-        ,{" "}
+        {" , "}
         <input
           style={inputWidth}
+          type="text"
           maxLength={3}
-          minLength={1}
           placeholder="186"
+          pattern="[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]"
         ></input>
-        ,{" "}
+        {" , "}
         <input
           style={inputWidth}
+          type="text"
           maxLength={3}
-          minLength={1}
           placeholder="3"
+          pattern="[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]"
         ></input>{" "}
         )
       </span>
