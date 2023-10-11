@@ -44,3 +44,11 @@ input{
 input:invalid {
   border: red solid 3px
 }
+
+.colour-box{
+  height: 20px;
+  width: 20px;
+  border: black;
+  border-style: solid;
+  display: inline-flex;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import ColourIs from "./ColourIs";
 
 export default function HexForm() {
   let colourCode = "";
@@ -18,20 +19,23 @@ export default function HexForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <p>Enter your HEX code:</p>
-      <p>
-        #
-        <input
-          name="HEX-value"
-          style={inputWidth}
-          type="text"
-          maxLength={6}
-          placeholder="fcba03"
-          pattern="[a-f0-9]{6}"
-        ></input>
-      </p>
-      <button type="submit">Submit</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <p>Enter your HEX code:</p>
+        <p>
+          #
+          <input
+            name="HEX-value"
+            style={inputWidth}
+            type="text"
+            maxLength={6}
+            placeholder="fcba03"
+            pattern="[a-f0-9]{6}"
+          ></input>
+        </p>
+        <button type="submit">Submit</button>
+        <ColourIs colourCode={colourCode} />
+      </form>
+    </>
   );
 }
